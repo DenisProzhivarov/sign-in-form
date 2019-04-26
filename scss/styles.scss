@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+@import "normalize";
+
+* {
+	box-sizing: border-box;
+	// transition: all .3s easy-in;
+}
+
+$primary-color:#ea355a;
+
+html {
+	font-size: 10px;
+	height: 100%;
+}
+
+body {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 700;
+	font-size: 1.8rem;
+	line-height: 1.6;
+	color: #fff;
+	min-height: 100%;
+	position: relative;
+	// background: pink;
+	background-color: #e5eeee;
+}
+
+// a{
+// 	text-decoration: none;
+// }
+
+
+.form {
+	margin: 0;
+	padding: 0;
+	// outline: 1px solid red;
+	// box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	box-shadow:0 15px 15px 0px rgba(0,0,0,0.5);
+	max-width: 400px;
+	width: 50%;
+	max-height: 500px;
+	height: 90%;
+	position: absolute;
+	top:50%;
+	left:50%;
+	background-repeat: no-repeat;
+	transform: translate(-50%, -50%);
+	 background-image: linear-gradient( 58deg, rgba(48,35,174, 1) 0%, rgba(124,72,195, 1) 53%, rgba(200,109,215, 1) 100%);
+
+	&__img {
+		// outline: 1px solid red;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		z-index: 1;
+		opacity: .3;
+	}
+	&__text {
+		padding: 50px 70px;
+		position: absolute;
+		z-index: 2;
+		width:100%;
+		text-align: center;
+	}
+	&__name {
+		padding: 0;
+		margin: 0;
+		font-size: 0;
+		width: 100%;
+		height: auto;
+		// outline: 1px solid red;
+		display: inline-block;
+		text-align: left;
+		margin-bottom: 40px;
+	}
+	&__h1 {
+		// outline: 1px solid red;
+		display: inline-block;
+		font-size: 1.8rem;
+		height: 100%;
+		margin: 0;
+		max-width: 45%;
+		margin-right: 20px;
+		padding-right: 5%;
+		border-bottom: 1px solid transparent;
+		// font-weight: 300;
+		opacity: .5;
+		transition: all .5s ease-in-out;
+		white-space: nowrap; /* Запрещаем перенос строк */
+		overflow: hidden; /* Обрезаем все, что не помещается в область */
+		text-overflow: ellipsis; /* Добавляем многоточие */
+		&:last-child {
+			margin: 0;
+		}
+		&:focus,
+		&:active,
+		&:hover {
+			border-bottom: 1px solid #e66a64;
+			cursor: pointer;
+			opacity: 1;
+		}
+	}
+	&__data {
+		font-size: 1.6rem;
+		text-align: left;
+		padding-bottom: 5px;
+		float:left;
+		width:100%;
+		white-space: nowrap; /* Запрещаем перенос строк */
+		overflow: hidden; /* Обрезаем все, что не помещается в область */
+		text-overflow: ellipsis; /* Добавляем многоточие */
+	}
+	&__field {
+		background-color: transparent;
+		width:100%;
+		color: #fff;
+		margin-bottom: 15px;
+		border: none;
+		border: 1px solid #af8fcc;
+		padding: 9px 4px;
+		outline: none;
+		&--mar {
+			margin-bottom: 20px;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			border:1px solid #fff;
+		}
+		
+	}
+	&__checkbox {
+		display: none;
+		width: 0;
+	}
+	&__check {
+		text-align: left;
+		font-size: 0;
+		margin-bottom: 40px;
+		// outline: 1px solid red;
+	}
+	&__newcheckbox,
+	&__disc {
+		color: #fff;
+		cursor: default;
+		font-size: 13px;
+		position: relative;
+		text-align: left;
+		// outline: 1px solid red;
+		letter-spacing: 1px;
+
+		&:hover,
+		&:focus,
+		&:active {
+			cursor: pointer;
+		}
+	}
+	&__disc{
+		padding-left: 8px;
+		width: calc(100% - 15px);
+		display: inline-block;
+		// outline: 1px solid red;
+		white-space: nowrap; /* Запрещаем перенос строк */
+		overflow: hidden; /* Обрезаем все, что не помещается в область */
+		text-overflow: ellipsis; /* Добавляем многоточие */
+	}
+	&__newcheckbox {
+		font-size: 0;
+		color: transparent;
+	}
+	&__newcheckbox:before {
+		 content: "";
+		 width: 15px;
+		 height: 15px;
+		 background-color: #23ae92;
+		 display: inline-block;
+		 position: relative;
+		 text-align: left;
+	}
+	&__mark {
+		font-size: 10px;
+		position: absolute;
+		top: -5px;
+		left: 2.5px;
+	}
+	&__newcheckbox:before,
+	&__newcheckbox,
+	&__disc{
+		vertical-align: middle;
+		// outline: 1px solid red;
+	}
+	&__checkbox:checked + .form__newcheckbox{
+		color: white;
+	}
+	&__button {
+		cursor: pointer;
+		width: 100%;
+		padding: 11px;
+		text-align: center;
+		color: #fff;
+		background-color: #23ae92;
+		border: none;
+		margin-bottom: 25px;
+		font-family: 'Quicksand', sans-serif;
+		font-weight: 700;
+		transition: all .5s ease-in-out;
+		white-space: nowrap; /* Запрещаем перенос строк */
+		overflow: hidden; /* Обрезаем все, что не помещается в область */
+		text-overflow: ellipsis; /* Добавляем многоточие */
+		&:hover,
+		&:focus,
+		&:active {
+			color: #23ae92;
+			background-color: #fff;
+		}
+	}
+	&__comms {
+		width:100%;
+		font-size: 0;
+		padding: 0;
+		margin: 0;
+		font-family: 'Quicksand', sans-serif;
+		// outline: 1px solid red;
+	}
+	&__comm {
+		display: inline-block;
+		width: 45%;
+		font-weight: 400;
+		// outline: 1px solid red;
+		font-size: 13px;
+		padding: 2px 0;
+		margin: 0;
+		text-align: left;
+		color: #fff;
+		opacity: .5;
+		border-bottom: 1px solid transparent;
+		transition: all .5s ease-in-out;
+		white-space: nowrap; /* Запрещаем перенос строк */
+		overflow: hidden; /* Обрезаем все, что не помещается в область */
+		text-overflow: ellipsis; /* Добавляем многоточие */
+		&:first-child {
+			margin-right: 10%;
+		}
+		&:hover,
+		&:focus,
+		&:active {
+			border-bottom: 1px solid #fff;
+			cursor: pointer;
+			opacity: 1;
+		}
+	}
+}
+
+
+// input[type="checkbox"] {
+// 	display: none;
+// }
+
+
+ 
