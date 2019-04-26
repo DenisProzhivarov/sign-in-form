@@ -327,6 +327,12 @@ body {
   position: relative;
   background-color: #e5eeee; }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+  margin: 0; }
+
 .form {
   margin: 0;
   padding: 0;
